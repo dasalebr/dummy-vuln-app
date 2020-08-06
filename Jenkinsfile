@@ -12,8 +12,7 @@ metadata:
       container.seccomp.security.alpha.kubernetes.io/dind: unconfined
 spec: 
     nodeSelector:
-      topology.kubernetes.io/zone: eu-west-1c
-    nodeName: ip-10-0-209-124.eu-west-1.compute.internal
+      topology.kubernetes.io/zone: eu-west-1a
     containers: 
       - name: dind
         image: docker:dind
@@ -40,7 +39,7 @@ spec:
       emptyDir: {}
     - name: jenkins-cache
       hostPath: 
-        path: /tmp/cache
+        path: /var/tmp/cache
         type: DirectoryOrCreate
 """
        }
