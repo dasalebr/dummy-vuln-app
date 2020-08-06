@@ -19,6 +19,8 @@ spec:
         volumeMounts:
         - name: var-run
           mountPath: /var/run
+        - name: jenkins-cache
+          mountPath: /var/lib/docker
       - name: jnlp
         securityContext:
           runAsUser: 0
@@ -26,10 +28,15 @@ spec:
         volumeMounts:
         - name: var-run
           mountPath: /var/run
+        - name: jenkins-cache
+          mountPath: /var/lib/docker
         
     volumes:
     - emptyDir: {}
       name: var-run
+    - persistentVolumeClaim:
+        claimName: jenkins-cache
+      name: jenkins-cache
 """
        }
    }
