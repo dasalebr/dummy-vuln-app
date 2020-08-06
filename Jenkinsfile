@@ -33,11 +33,10 @@ spec:
           mountPath: /var/lib/docker
         
     volumes:
-    - emptyDir: {}
-      name: var-run
-    - persistentVolumeClaim:
-        claimName: jenkins-cache
-      name: jenkins-cache
+    - name: var-run
+      emptyDir: {}
+    - name: jenkins-cache
+      emptyDir: {}
 """
        }
    }
