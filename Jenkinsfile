@@ -13,6 +13,7 @@ metadata:
 spec: 
     nodeSelector:
       topology.kubernetes.io/zone: eu-west-1c
+    nodeName: ip-10-0-209-124.eu-west-1.compute.internal
     containers: 
       - name: dind
         image: docker:dind
