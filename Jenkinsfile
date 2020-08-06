@@ -6,6 +6,7 @@ apiVersion: v1
 kind: Pod 
 metadata: 
     name: dind
+    namespace: jenkins
     annotations:
       container.apparmor.security.beta.kubernetes.io/dind: unconfined
       container.seccomp.security.alpha.kubernetes.io/dind: unconfined
