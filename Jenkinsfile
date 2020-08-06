@@ -41,7 +41,7 @@ spec:
     - name: jenkins-cache
       hostPath: 
         path: /tmp/cache
-        type: Directory
+        type: DirectoryOrCreate
 """
        }
    }
