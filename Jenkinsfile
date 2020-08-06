@@ -11,6 +11,8 @@ metadata:
       container.apparmor.security.beta.kubernetes.io/dind: unconfined
       container.seccomp.security.alpha.kubernetes.io/dind: unconfined
 spec: 
+    nodeSelector:
+      topology.kubernetes.io/zone: eu-west-1c
     containers: 
       - name: dind
         image: docker:dind
