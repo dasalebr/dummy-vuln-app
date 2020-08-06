@@ -36,8 +36,7 @@ spec:
     - name: var-run
       emptyDir: {}
     - name: jenkins-cache
-      persistentVolumeClaim:
-        claimName: jenkins-cache
+      emptyDir: {}
 """
        }
    }
